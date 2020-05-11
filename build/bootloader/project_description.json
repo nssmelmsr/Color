@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/nassim/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/nassim/esp/Sistemas/blink/build/bootloader",
+    "config_file":        "/home/nassim/esp/Sistemas/blink/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.2-dev-430-g7092613ee",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/nassim/esp/esp-idf/components/efuse/Kconfig;/home/nassim/esp/esp-idf/components/esp32/Kconfig;/home/nassim/esp/esp-idf/components/esp_common/Kconfig;/home/nassim/esp/esp-idf/components/log/Kconfig;/home/nassim/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/nassim/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/nassim/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/nassim/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/nassim/esp/esp-idf/components/bootloader", "/home/nassim/esp/esp-idf/components/bootloader_support", "/home/nassim/esp/esp-idf/components/efuse", "/home/nassim/esp/esp-idf/components/esp32", "/home/nassim/esp/esp-idf/components/esp_common", "/home/nassim/esp/esp-idf/components/esp_rom", "/home/nassim/esp/esp-idf/components/esptool_py", "/home/nassim/esp/esp-idf/components/log", "/home/nassim/esp/esp-idf/components/bootloader/subproject/main", "/home/nassim/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/nassim/esp/esp-idf/components/partition_table", "/home/nassim/esp/esp-idf/components/soc", "/home/nassim/esp/esp-idf/components/spi_flash", "/home/nassim/esp/esp-idf/components/xtensa", "" ]
+}

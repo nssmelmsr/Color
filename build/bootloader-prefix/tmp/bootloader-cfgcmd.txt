@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DSDKCONFIG=/home/nassim/esp/Sistemas/blink/sdkconfig;-DIDF_PATH=/home/nassim/esp/esp-idf;-DIDF_TARGET=esp32;-DPYTHON_DEPS_CHECKED=1;-DPYTHON=/home/nassim/.espressif/python_env/idf4.2_py2.7_env/bin/python;-DEXTRA_COMPONENT_DIRS=/home/nassim/esp/esp-idf/components/bootloader;-DLEGACY_INCLUDE_COMMON_HEADERS=;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
