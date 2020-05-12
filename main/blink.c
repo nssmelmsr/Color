@@ -1,9 +1,11 @@
-/* 
+/*
 
 Version inicial de sensor de color, consta de un frecuanciometro para calcular
 la frecuenci obtenida a partir del sensor TCS3200
-
-
+TCS3200 Output  Square wave 50% Duty cycle with frequency directly
+                proportional to light intensity.
+full scale frequency    10 - 12 kHz, T=> 100 - 83 microseconds
+dark frequency          2 - 10 Hz
 */
 #include <stdio.h>
 #include <string.h>
@@ -14,9 +16,9 @@ la frecuenci obtenida a partir del sensor TCS3200
 
 
     //uint16_t cnt = 0;
-    
 
-#define PeriodoMedicion pdMS_TO_TICKS(0.05) 	//Periodo de timer						
+
+#define PeriodoMedicion pdMS_TO_TICKS(0.05) 	//Periodo de timer
 						//Debe ser bajo para medir longitud de onda
 #define SalidaSensor 		14
 #define GPIO_INPUT_PIN_SEL 	(1ULL<<SalidaSensor)
@@ -47,7 +49,7 @@ void app_main(void)
     gpio_config(&io_conf);
  */
 
-   TimerHandle_t xPrimerTimer;	
+   TimerHandle_t xPrimerTimer;
    BaseType_t xTimerIniciado;
 
    xPrimerTimer = xTimerCreate("timerMedicion", PeriodoMedicion,pdTRUE,0,Callback);
@@ -58,9 +60,9 @@ void app_main(void)
     while(1){
 
 	/*Aqui hay que ver los valores que da para determinar
-	el color y que lo imprima*/	      
+	el color y que lo imprima*/
 
-          
+
       }
   //    vTaskDelay(1000 / portTICK_RATE_MS);
     }
@@ -78,14 +80,14 @@ static void TaskColor(void *pvParameters)
 {
     uint8_t etapa = 0;
     int t1=0, t2=0, T=0, F=0;
- 
+
    switch(etapa){
-          case 0: 
+          case 0:
 		t1 = uxTaskGetTickCount();
 		etapa++;
                   break;
 
-          case 1: 
+          case 1:
 		t2 = uxTaskGetTickCount();
 		T= (t2-t1)/0.05;
 		F= 1/T;
