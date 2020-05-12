@@ -1,4 +1,3 @@
-# Sensor de color Version 0.1
+# Colur Sensor Version 0.1
 
-Este código utiliza un busca leer la frecuencia de salida un sensor TCS3200 para aproximar el color que se trata de medir
-
+This Code its looking to read the frequency of the ouput in the TCS3200 Sensor to aproximate the sensed colour
